@@ -64,6 +64,10 @@ body {
                 }
                 h1 {
                     @extend %aligning;
+                    @media (max-width:780px ){
+                        top : 10%;
+                        font-size : 6em;
+                    }
                     // align-items : flex-end;
                     // flex : 4;
                     font-size: 18em;
@@ -89,6 +93,9 @@ body {
                 justify-content: center;
                 // align-items: center;
             }
+            @media (max-width:760px){
+                flex-direction : column;
+            }
             .release-album {
                 flex: 1;
                 @extend %align-items;
@@ -98,6 +105,14 @@ body {
                 }
             }
             .release-details {
+                @media (max-width:560px){
+                    margin-top : 40px;
+                    padding : 0 40px;
+
+                    h2, h4 {
+                        align-self : center;
+                    }
+                }
                 & h4 {
                     margin: 10px 0;
                 }
@@ -167,6 +182,10 @@ body {
                         font-size: 6.4rem;
                     }
                     p {
+                        @media (max-width:560px){
+                            width : 100%;
+                            padding : 20px;
+                        }
                         margin: 10vh auto;
                         // margin-right: auto;
                         // margin-left: auto;
@@ -182,6 +201,14 @@ body {
                             padding: 20px 0;
                             border: none;
                             background-color: #f1f1f1;
+                            @media (max-width:560px){
+                                [type='text'] {
+                                    width : 90%;
+                                }        
+                                [type='submit']{
+                                    width : 10%;
+                                }
+                            }
                         }
                         [type='text'] {
                             width: 400px;
